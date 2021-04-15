@@ -2,7 +2,7 @@
 This guide is aimed to make the instalation of Arch linux as easy as possible.
 
 ### NOTE
-I am aware of the existence of the new arch installer, but it does not work in non-EFI system aka older systems and most VMs.
+I am aware of the existence of the new arch installer, but it does not work on non-EFI system aka older systems and most VMs.
 
 ### Step 0
 

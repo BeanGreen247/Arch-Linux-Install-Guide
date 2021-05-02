@@ -138,7 +138,30 @@ System clock synchronized: no
               NTP service: inactive
           RTC in local TZ: no
 ```
-
+Enable timesync service
+```
+sudo systemctl enable systemd-timesyncd.service
+```
+Start it
+```
+sudo systemctl start systemd-timesyncd.service 
+```
+Edit the timesync config file
+```
+sudo nano /etc/systemd/timesyncd.conf
+```
+Change this line
+```
+#FallbackNTP=0.arch.pool.ntp.org 1.arch.pool.ntp.org 2.arch.pool.ntp.org 3.arch.pool.ntp.org
+```
+to this
+```
+FallbackNTP=0.arch.pool.ntp.org 1.arch.pool.ntp.org 2.arch.pool.ntp.org 3.arch.pool.ntp.org
+```
+Vertify the changes
+```
+timedatectl show-timesync --all
+```
 ### Step 9
 Network configuration
 
